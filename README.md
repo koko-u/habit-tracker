@@ -37,6 +37,9 @@ export DATABASE_NAME=habit_tracker
 export DATABASE_SSLMODE=disable
 export DATABASE_URL="postgres://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}?sslmode=${DATABASE_SSLMODE}"
 
+export SERVER_HOST=127.0.0.1
+export SERVER_PORT=8000
+
 export PGADMIN_EMAIL=admin@example.com
 export PGADMIN_PASSWORD=change-me
 ```
@@ -70,6 +73,16 @@ just dup
 
 ```bash
 just run
+```
+
+起動後、ヘルスチェックを利用できます。
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+```json
+{"status":"ok"}
 ```
 
 ソースコードの変更を監視してバックエンドを再実行します。
