@@ -4,6 +4,8 @@ use actix_web::get;
 use actix_web::web;
 use serde::Serialize;
 
+pub mod config;
+
 #[derive(Serialize)]
 struct HealthResponse {
     status: &'static str,
