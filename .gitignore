@@ -1,6 +1,9 @@
 # Rust build artifacts
 /backend/target/
 
+# JetBrains IDE settings
+/backend/.idea/
+
 # Local environment variables and secrets
 .env
 .env.*
